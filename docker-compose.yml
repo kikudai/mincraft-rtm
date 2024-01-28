@@ -2,7 +2,7 @@ version: '3.8'
 services:
   minecraft-server:
     container_name: minecraft-server
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:java8-multiarch  # Forge のバージョンが 1.18 未満の場合は、java8-multiarch を利用
     ports:
       - "25565:25565"
     volumes:
@@ -10,7 +10,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "FORGE"
-      VERSION: "2.12.2"
+      VERSION: "1.12.2"
       FORGEVERSION: "RECOMMENDED"
       MEMORY: "2G"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
