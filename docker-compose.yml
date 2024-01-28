@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  minecraft-server:
+    container_name: minecraft-server
+    image: itzg/minecraft-server
+    ports:
+      - "25565:25565"
+    volumes:
+      - "./data:/data"
+    environment:
+      EULA: "TRUE"
+      TYPE: "FORGE"
+      VERSION: "2.12.2"
+      FORGEVERSION: "RECOMMENDED"
+      MEMORY: "2G"
+      OVERRIDE_SERVER_PROPERTIES: "TRUE"
+      MODE: creative  # クリエイティブモード
+      LEVEL_TYPE: FLAT  # スーパーフラットワールド
+      DIFFICULTY: peaceful  # ピースフルモード
+      ALLOW_CHEATS: "true"  # チート許可
+      SPAWN_MONSTERS: "false"  # 敵スポーンなし
+      PVP: "false"  # PVP無効
+      ONLINE_MODE: "FALSE"  # LAN内のみ利用
+    restart: unless-stopped
