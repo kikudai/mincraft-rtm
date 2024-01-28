@@ -5,7 +5,7 @@ Docker Desktop for Windows がインストールされているPC、Windows10、
 Windowsのファイル領域（ファイルマウント）されていると遅くなる現象があるため、WSL内にdockerを配置してWSLからdocker起動することをおすすめします。  
 Forge 1.12.2 の設定をしてRTM2系利用しています。  
 
-### 設定済みとしてスキップしているもの
+### 手順で説明していないもの
 * RTMのローカルPC設定
 * Docker Desktop for Windowsのインストール・設定
 
@@ -53,7 +53,7 @@ cat ./data/usercache.json | jq '. | del(.[].expiresOn) | .[].level=4 | .[].bypas
 ]
 ```
 ### ops.json 補足
-RTMオブジェクトを配置するためにはops.jsonを設定しないと、警告がでてレールなどが配置できない。  
+RTMオブジェクトを配置するためにはops.jsonを設定しないと、警告がでてレールなどが配置できません。  
 
 ### 動機
 鉄オタ息子と一緒にマイクラRTM（リアル鉄道MOD）で遊ぶため、お手軽な「ダイレクト接続」で息子のPCのマイクラにアクセスしたところ、息子が作った電車がどうしても見えない現象に頭を悩まされました。  
